@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package pkg2024_exam_q1;
+
+package pkg2024_exam;
 
 public class MovieTickets implements IMovieTickets
 {
-    
+    //Method calculates total sales by looping through each element and adding it
     @Override
      public int TotalMovieSales(int[] movieTicketSales)
      {
@@ -18,9 +15,11 @@ public class MovieTickets implements IMovieTickets
          return total;
      }
 
+     
     @Override
     public String TopMovie(String[] movies, int[] totalSales)
     {
+        //Start by assuming that max sales is at the first index
         int max = totalSales[0];
         String topMovie = movies[0];
 

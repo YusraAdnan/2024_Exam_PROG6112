@@ -8,8 +8,9 @@ public interface IMovieTickets
     follow the below method declaration as is because there is no marks
     for creating a class called MovieTicketData */
     
+    /* Option 1: */
     boolean ValidateData(MovieTicketData movieTicketData);  
     
-    //If you do not create a class to hold the MovieTicket Data separately you can make an alternate method like below
+    //Option 2: If you do not create a class to hold the MovieTicket Data separately you can make an alternate method like below
     boolean ValidateData2(String movieName, int numbOfTickets, double ticketPrice);  
 }

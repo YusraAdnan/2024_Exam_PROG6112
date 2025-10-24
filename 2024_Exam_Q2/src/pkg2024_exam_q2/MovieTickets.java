@@ -22,7 +22,7 @@ public class MovieTickets implements IMovieTickets
         return final_Price;
     }
     
-    /* This method shows how to validate data with the use of MovieTicketData 
+    /* Option 1: This method shows how to validate data with the use of MovieTicketData 
        class and by passing different populated objects to this method to 
        validate each field systematically */
     @Override
@@ -44,7 +44,7 @@ public class MovieTickets implements IMovieTickets
         return true;
     }
     
-    //This method shows how you can do validation WITHOUT making a class for MovieTicketData 
+    //Option 2: This method shows how you can do validation WITHOUT making a class for MovieTicketData 
     @Override
     public boolean ValidateData2(String movieName, int numbOfTickets, double ticketPrice)
     {

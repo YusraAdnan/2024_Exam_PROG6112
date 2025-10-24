@@ -19,6 +19,9 @@ public class MovieTicket_Frame extends javax.swing.JFrame
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -34,6 +37,12 @@ public class MovieTicket_Frame extends javax.swing.JFrame
         jMenu2 = new javax.swing.JMenu();
         JMenuItem_Process = new javax.swing.JMenuItem();
         JMenuItem_Clear = new javax.swing.JMenuItem();
+
+        jMenu1.setText("File");
+        jMenuBar2.add(jMenu1);
+
+        jMenu3.setText("Edit");
+        jMenuBar2.add(jMenu3);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -162,7 +171,7 @@ public class MovieTicket_Frame extends javax.swing.JFrame
            //We can only calculate the total price if the data is valid
            double totalPrice = mt.CalculateTotalTicketPrice(numberOfTickets, price);
            
-           output  = "MOVIE NAME: " + movieName + "\n"
+           output = "MOVIE NAME: " + movieName + "\n"
             + "MOVIE TICKET PRICE: R" + price + "\n"
             + "NUMBER OF TICKETS: " + numberOfTickets + "\n"
             + "TOTAL TICKET PRICE: R" + totalPrice ;
@@ -176,13 +185,14 @@ public class MovieTicket_Frame extends javax.swing.JFrame
 
         TextArea_Report.setText(output);
 
+        //Write the same output report to the text file
         FileWriter writer = new FileWriter("report.txt", true);
         
         writer.write("MOVIE TICKET REPORT \n"
                 + "*********************************** \n"
                 + output + "\n"
                 + "**********************************\n");
-        writer.close();
+        writer.close();//Very important
         
         JOptionPane.showMessageDialog(this, "Record saved successfully!");
      }
@@ -247,8 +257,11 @@ public class MovieTicket_Frame extends javax.swing.JFrame
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }
