@@ -44,7 +44,9 @@ public class MovieTickets implements IMovieTickets
         return true;
     }
     
-    //Option 2: This method shows how you can do validation WITHOUT making a class for MovieTicketData 
+    /*Option 2: This method shows how you can do validation WITHOUT making a class for MovieTicketData 
+    (you will lose a few marks if you do this in you exam as this is not exactly implementing the interface as asked in the question paper
+    This is just another way of how you can do the above method without a class) */
     @Override
     public boolean ValidateData2(String movieName, int numbOfTickets, double ticketPrice)
     {
